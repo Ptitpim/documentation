@@ -65,12 +65,23 @@ Lister les container lancés dernièrement et/ou toujours actifs
 docker container ls -a
 ```
 
+Lister les images téléchargées
+------------------------------
+
+Documentation : https://docs.docker.com/edge/engine/reference/commandline/image/#child-commands
+
+```bash
+docker image ls
+```
+
 Stopper le container dont on fournit l'ID
 -----------------------------------------
 
 ```bash
 docker container stop <container-id>
 ```
+
+On peut stopper plusieurs container en ajoutant les IDs à la suite
 
 Lister les process du container
 -------------------------------
@@ -117,3 +128,32 @@ On peut par exemple indiquer uniquement les 3 premières lettres/chiffres de l'I
 
 On ne peut pas supprimer un container qui est en train de tourner
 
+CLI pour docker container run (Edge version)
+--------------------------------------------
+
+Documentation :
+https://docs.docker.com/edge/engine/reference/commandline/container_run/#options
+
+| Name, shorthand  | Description                                        |
+| ---------------- | -------------------------------------------------- |
+| `--detach , -d`  | Run container in background and print container ID |
+| `--env , -e`     | Set environment variables                          |
+| `--publish , -p` | Publish a container’s port(s) to the host          |
+| `--name`         | Assign a name to the container                     |
+
+```bash
+docker container run -d -p 3306:3306 --name db -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
+```
+
+What's going on in containers
+-----------------------------
+
+- `docker container top` - process list in one container
+- `docker container inspect` - details of one container config
+- `docker container stats` - performance stats of all containers
+
+Getting a Shell inside containers
+---------------------------------
+
+- `docker container run -it` - start new container interactively
+- `docker container exec -it` - run additional command in existing container
