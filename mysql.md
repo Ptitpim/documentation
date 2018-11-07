@@ -1,0 +1,45 @@
+# MYSQL
+
+## Se connecter
+
+```bash
+mysql -u root -p
+```
+
+## Créer un base de données
+
+```bash
+mysql> CREATE DATABASE [IF NOT EXISTS] db_name;
+```
+
+## Quelques requêtes utiles
+
+### Afficher toutes les bases
+
+```bash
+mysql> SHOW DATABASES;
+```
+
+### Afficher toutes les tables d’une base
+
+```bash
+mysql> SHOW TABLES FROM mabase;
+```
+
+### Créer une base
+
+```bash
+mysql> CREATE DATABASE mabase DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+```
+
+### Sélectionner une base
+
+```bash
+mysql> USE mabase;
+```
+
+### Afficher les colonnes d’une table
+
+```bash
+mysql> SHOW COLUMNS FROM matable;
+```
