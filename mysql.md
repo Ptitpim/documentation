@@ -6,10 +6,10 @@
 mysql -u root -p
 ```
 
-## Créer un base de données
+## Importer un dump
 
 ```bash
-mysql> CREATE DATABASE [IF NOT EXISTS] db_name;
+mysql -u username -p new_database < data-dump.sql
 ```
 
 ## Quelques requêtes utiles
@@ -18,6 +18,12 @@ mysql> CREATE DATABASE [IF NOT EXISTS] db_name;
 
 ```bash
 mysql> SHOW DATABASES;
+```
+
+### Créer un base de données
+
+```bash
+mysql> CREATE DATABASE [IF NOT EXISTS] db_name;
 ```
 
 ### Afficher toutes les tables d’une base
