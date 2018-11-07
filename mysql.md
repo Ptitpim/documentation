@@ -20,28 +20,32 @@ mysql -u username -p new_database < data-dump.sql
 mysql> SHOW DATABASES;
 ```
 
-### Créer un base de données
-
-```bash
-mysql> CREATE DATABASE [IF NOT EXISTS] db_name;
-```
-
 ### Afficher toutes les tables d’une base
 
 ```bash
-mysql> SHOW TABLES FROM mabase;
+mysql> SHOW TABLES FROM db_name;
 ```
 
 ### Créer une base
 
 ```bash
-mysql> CREATE DATABASE mabase DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+mysql> CREATE DATABASE db_name DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+```
+
+```bash
+mysql> CREATE DATABASE [IF NOT EXISTS] db_name;
+```
+
+### Supprimer une base
+
+```bash
+mysql> DROP DATABASE db_name;
 ```
 
 ### Sélectionner une base
 
 ```bash
-mysql> USE mabase;
+mysql> USE db_name;
 ```
 
 ### Afficher les colonnes d’une table
