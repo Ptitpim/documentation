@@ -34,3 +34,5 @@ Ressources
 - [The minimal React + Webpack 4 + Babel Setup](https://www.robinwieruch.de/minimal-react-webpack-babel-setup/) (january 18, 2018)
 - [rwieruch/minimal-react-webpack-babel-setup](https://github.com/rwieruch/minimal-react-webpack-babel-setup) (github)
 - [React Code Style with ESLint + Babel + Webpack](https://www.robinwieruch.de/react-eslint-webpack-babel/) (january 19, 2018)
+- [Webpack config tool](https://webpack.jakoblind.no/)
+- [Generate Webpack config](https://generatewebpackconfig.netlify.com/)
